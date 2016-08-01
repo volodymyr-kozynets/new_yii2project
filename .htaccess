@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    AddDefaultCharset UTF-8
+
+    Options -Indexes
+    Options FollowSymlinks
+
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} ^/(advanced/admin)
+    RewriteRule ^admin(\/?.*)$ backend/web/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^/(advanced)
+    RewriteRule ^(\/?.*)$ frontend/web/$1 [L]
+</IfModule>
