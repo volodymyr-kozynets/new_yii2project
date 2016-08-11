@@ -6,8 +6,11 @@ use Yii;
 use backend\models\Items;
 use backend\models\ItemsSearch;
 use yii\web\Controller;
+use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\UploadForm;
+use yii\web\UploadedFile;
 
 /**
  * ItemsController implements the CRUD actions for Items model.
@@ -26,9 +29,23 @@ class ItemsController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index', 'items', 'create', 'view', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
         ];
     }
-
+  
     /**
      * Lists all Items models.
      * @return mixed
@@ -66,6 +83,10 @@ class ItemsController extends Controller
         $model = new Items();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->file_image = UploadedFile::getInstances($model, 'file_image');
+            Yii::$app->controller->createDirectory('uploads/' . $model->id . '/');
+            $id = $model->id;
+            $model->upload($id);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -85,6 +106,8 @@ class ItemsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->file_image = UploadedFile::getInstance($model, 'file_image');
+            $model->upload($id);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -101,8 +124,8 @@ class ItemsController extends Controller
      */
     public function actionDelete($id)
     {
+        Yii::$app->controller->removeDirectory('uploads/' . $id . '/');
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

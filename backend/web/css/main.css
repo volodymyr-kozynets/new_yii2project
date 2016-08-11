@@ -1,0 +1,449 @@
+/* ------------------------------------------------------------------------------
+	Template Name: Orly
+	Author: Designstub
+	Author URI: http://www.designstub.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2|Lobster);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+
+p {
+	font-size: 14px;
+	line-height: 22.4px;
+	color: #6c7279;
+}
+h1 {
+	font-size: 65px;
+	color: #2d3033;
+}
+h2 {
+	font-size: 40px;
+	color: #2d3033;
+}
+h3 {
+	font-size: 28px;
+	color: #2d3033;
+	font-weight: 300;
+}
+h4 {
+	font-size: 22px;
+	color: #2d3033;
+	font-weight: 400;
+}
+h5 {
+	font-size: 14px;
+	color: #2d3033;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.btn {
+	color: #000;
+	font-size: 13px;
+	font-weight: 600;
+	border-bottom:3px solid rgba(51, 0, 0, 1);
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	letter-spacing:3px;
+	line-height:30px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+.btn:hover, .btn:focus {
+	color: #fff;
+        background-color:  rgba(247, 202, 201, 1);
+}
+.btn-large {
+	padding: 15px 40px;
+}
+/* ------------------------------------------------------------------------------
+	Global Styles
+-------------------------------------------------------------------------------*/
+a {
+	color: #e84545;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	-moz-transition: background-color, color, 0.3s;
+	-o-transition: background-color, color, 0.3s;
+	-webkit-transition: background-color, color, 0.3s;
+	transition: background-color, color, 0.3s;
+}
+body {
+	font-family: "Exo 2", sans-serif;
+	font-weight: 400;
+	color: #6c7279;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style: none;
+}
+.section {
+	padding: 100px 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+ .no-gutter [class*=col-] {
+ padding-right: 0;
+ padding-left: 0;
+}
+.border-line{
+    background-color: #ECF0F1;
+    font-family:"Lobster", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #000;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    box-shadow: inset 0 0 10px rgba(0,0,0,1);
+    text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+}
+
+/* ------------------------------------------------------------------------------
+	Navbar
+-------------------------------------------------------------------------------*/
+.navbar-nav li a{
+        font-family: "Lobster", sans-serif;
+        font-size: 20px;
+}
+.logout-button{
+        font-family: "Lobster", sans-serif;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing:0px;
+}
+
+/* ------------------------------------------------------------------------------
+	Banner
+-------------------------------------------------------------------------------*/
+
+.logo {
+	color: rgba(255, 255, 255,1);
+	font-family: "Exo 2", sans-serif;
+	font-weight: 700;
+	font-size:22px;
+	letter-spacing:3px;
+	border:1px solid rgba(255, 255, 255, 0.5);
+	padding:10px 20px;
+	background-color: rgba(247, 202, 201, 0.3);
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+.banner-area {
+	position: relative;
+}
+.banner-area-gradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgb(27,19,19);
+}
+.banner-text {
+    	margin-top: 5%;
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+.banner-text h1 {
+	color: #fff;
+	font-family: "Exo 2", sans-serif;
+	font-weight: 100;
+	letter-spacing:2px;
+	font-size:19px;
+	text-transform: uppercase;
+}
+.banner-text p {
+	color: rgba(255, 255, 255, 1);
+        font-family: "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing:1px;
+	margin-bottom: 5%;
+}
+
+/* ------------------------------------------------------------------------------
+	Pricelist
+-------------------------------------------------------------------------------*/
+.pricelist{
+    width: 100%;
+	background-color: #eee;
+	background-image: url('../images/backgrounds/3-child.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+.pricelist h3{
+    font-family: "Lobster", sans-serif;
+    margin-top: 19%;
+    background-color: #f7cac9;
+    padding: 3%;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+}
+
+.item {;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    padding: 2%;
+    background-color: rgba(170, 152, 189, 0.5);
+    width:100%;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+.item p{
+    color: white;
+}
+.pricelist img{
+    height: 200px;
+}
+
+/* ------------------------------------------------------------------------------
+	Introduction
+-------------------------------------------------------------------------------*/
+
+.intro{
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.intro-content {
+	margin-top: 20px;
+}
+.intro h1 {
+	font-family: "Exo 2", sans-serif;
+	font-size:33px;
+	font-weight: 700;
+}
+.intro h2 {
+	font-family: "Exo 2", sans-serif;
+	font-size:17px;
+	font-weight: 700;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+.intro p {
+	font-size:15px;
+	font-weight: 300;
+	letter-spacing:1px;
+	line-height:27px;
+}
+
+
+
+/* ------------------------------------------------------------------------------
+	Feedback
+-------------------------------------------------------------------------------*/
+.feedback{
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-color: #eee;
+    background-image: url('../images/platter/1-platter.jpg');
+    background-size: cover;
+}
+
+.feedback-text{
+        padding: 2%;
+        margin: 2%;
+        color: black;
+        background-color: rgba(247, 202, 201, 0.9);
+        box-shadow: 0 0 15px rgba(0,0,0,0.9);
+}
+.feedback img{
+    height: 100px;
+}
+
+/* ------------------------------------------------------------------------------
+	Service
+-------------------------------------------------------------------------------*/
+.service{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #eee;
+    background-image: url('../images/platter/1-platter.jpg');
+    background-size: cover;
+}
+.service-block{
+    margin:5%;
+}
+service-block>div>i{
+    padding: 20%;
+}
+.icon-fa-shadow{
+    text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+}
+
+/* ------------------------------------------------------------------------------
+	Subscribe
+-------------------------------------------------------------------------------*/
+
+	.subscribe {
+	width: 100%;
+	background-color: #eee;
+	background-image: url('../images/backgrounds/spring-tree-flowers-meadow.jpeg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+        color: white;
+}
+.subscribe >.container {
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+.subscribe-title h2 {
+	font-family:"Lobster", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: #fff;
+	letter-spacing:3px;
+	margin:0 3%;
+	line-height:35px;
+        text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+
+}
+.subscribe-form input[type=text] {
+	width: 65%;
+	height: 60px;
+	display: block;
+	padding: 0 20px;
+	background-color: rgba(247, 202, 201, 0.3);
+	border: 1px solid #fff;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	line-height: 60px;
+	letter-spacing:1px;
+	font-size:15px;
+	font-weight:600;
+	float: left;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+.subscribe-form input:focus {
+	outline: 0;
+}
+.subscribe-form input[type=submit] {
+	width: 35%;
+	height: 60px;
+	display: block;
+	padding: 0 10px;
+	border: 1px solid #fff;
+	color: #000;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	font-family: 'Lobster', sans-serif;
+	font-weight: 700;
+        font-size:15px;
+	transition: all 0.125s ease-in-out 0s;
+	-moz-transition: all 0.125s ease-in-out 0s;
+	-webkit-transition: all 0.125s ease-in-out 0s;
+	-o-transition: all 0.125s ease-in-out 0s;
+	-ms-transition: all 0.125s ease-in-out 0s;
+	float: right;
+        background-color: #ECF0F1;
+        text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+.subscribe-form input[type=submit]:hover {
+	background-color: rgb(247, 202, 201);
+	border: 1px solid rgb(247, 202, 201);
+}
+
+.error_message {
+	color:#fc6e51;
+	padding-bottom:15px;
+	font-size:13px;
+	line-height:30px;
+}
+
+#success_page {
+	color:#9ce726;
+	padding-bottom:10px;
+	font-size:12px;
+}
+#success_page h3 {
+	font-size:17px;
+	font-weight:400px;
+	color:#4ab217;
+}
+#success_page p {
+	font-size:12px;
+	font-weight:400px;
+	color:#b3b3b3;
+}
+
+/* ------------------------------------------------------------------------------
+	 Footer
+-------------------------------------------------------------------------------*/
+.footer {
+	text-align: left;
+	background-color: rgb(247, 202, 201);
+	padding:50px 0 50px 0;
+        box-shadow: inset 0 0 10px rgba(0,0,0,1);
+}
+
+.footer h5 {
+	color: #fff;
+}
+.footer h5 {
+	margin-bottom: 20px;
+}
+.footer p {
+	color: #92a8d1;
+	font-size:12px;
+	line-height:14px;
+}
+.footer a {
+	color: #92a8d1;
+}
+.footer a:hover {
+	color: white;
+}
+.footer .footer-share {
+	margin-top: 0;
+}
+.footer .footer-share li {
+	display: inline-block;
+	float: none;
+}
+.footer .footer-share a {
+	border: none;
+	color: #92a8d1;
+}
+.footer-share a:hover {
+	color: white;
+}
+.footer .fa-heart {
+	color: red;
+	font-size: 11px;
+	margin: 0 2px;
+}

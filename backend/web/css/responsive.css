@@ -1,0 +1,45 @@
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+ .banner-text {
+ padding-top: 30%;
+}
+ .banner-text h1 {
+ font-size: 18px;
+}
+ .banner-text p {
+ font-size: 14px;
+}
+ .footer .footer-col {
+ margin-bottom: 50px;
+}
+}
+@media screen and (max-width: 640px) {
+ .banner-text {
+ padding-top: 35%;
+}
+}
+@media screen and (max-width: 480px) {
+ .banner-text {
+ padding-top: 45%;
+}
+ .banner-text h1 {
+ font-size: 18px;
+}
+}
+@media screen and (max-width: 320px) {
+ .banner-text {
+ padding-top: 35%;
+ }
+ .banner-text p{
+ font-size: 14px;
+}
+.subscribe-form input[type=text] {
+    	height: 40px;
+	font-size:10px;
+ }
+ .subscribe-form input[type=submit] {
+        font-size:10px;
+	height: 40px;
+}
+}

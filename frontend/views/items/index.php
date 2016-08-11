@@ -1,32 +1,38 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use yii\widgets\ListView;
+use yii\data\ActiveDataProvider;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\ItemsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Items';
+$this->registerLinkTag([
+        'rel' => 'shortcut icon',
+        'type' => 'image/x-icon',
+        'href' => '../favicon.ico',
+]);
+
+$this->title = 'Каталог';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="items-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'code:ntext',
-            'name:ntext',
-            'description:ntext',
-            'price',
-
-            ['class' => 'yii\grid\ActionColumn', 'template' => '{view}'],
-        ],
-    ]); ?>
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
+    
+<section id="pricelist" class="pricelist">
+    <div class="container">
+        <div class="row text-center">
+             
+                <?php 
+                    echo ListView::widget([
+                        'dataProvider' => $dataProvider,
+                        'itemView' => '_post',
+                    ]);
+                ?>
+            
+        </div>
+    </div>
+</section>
+    
 </div>

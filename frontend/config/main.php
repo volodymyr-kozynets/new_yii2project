@@ -16,6 +16,7 @@ return [
         'request' => [
             'baseUrl' => '/advanced',
         ],
+        'defaultRoute' => 'site/about',
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
