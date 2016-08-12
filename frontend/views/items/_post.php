@@ -16,9 +16,9 @@ $img = '@back/uploads/' . $model->id . '/' . $items_names[0];
               <li>Тип: <?= Html::encode($model->name); ?></li>
               <li>Цена: <?= Html::encode($model->price); ?></li>
             </ul>
-        <button class="btn btn-default">
-            <a href="/advanced/items/view?id=<?= Html::encode($model->id)?>">Подробнее</a>
-        </button>
+        
+        <a class="psevdo-btn" href="/advanced/items/view?id=<?= Html::encode($model->id)?>">ПОДРОБНЕЕ</a>
+        
         <!--<button class="btn btn-default" data-toggle="modal" data-target="#myModal" data-content="<?= Html::encode($model->code)?>">
             Заказать
         </button>-->

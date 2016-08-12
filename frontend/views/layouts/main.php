@@ -51,6 +51,7 @@ AppAsset::register($this);
         ['label' => 'О нас', 'url' => ['/site/about']],
         ['label' => 'Услуги для Вас', 'url' => ['/site/service']],
         ['label' => 'Связаться с нами', 'url' => ['/site/contact']],
+        ['label' => '+38(063)-935-50-85', 'url' => ['#']],
     ];
 //    if (Yii::$app->user->isGuest) {
 //        //$menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];

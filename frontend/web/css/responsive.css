@@ -28,6 +28,9 @@
 }
 }
 @media screen and (max-width: 320px) {
+ h1{
+ font-size: 18px;   
+}
  .banner-text {
  padding-top: 35%;
  }

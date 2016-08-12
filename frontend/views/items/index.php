@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ListView;
 use yii\data\ActiveDataProvider;
+use frontend\models\Items;
+use frontend\models\ItemsSearch;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\ItemsSearch */
@@ -25,6 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row text-center">
              
                 <?php 
+                    $dataProvider = new ActiveDataProvider([
+                        'query' => Items::find()->orderBy('id DESC'),
+                    ]);
                     echo ListView::widget([
                         'dataProvider' => $dataProvider,
                         'itemView' => '_post',

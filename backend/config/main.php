@@ -15,7 +15,7 @@ return [
     'modules' => [],
     'components' => [
         'request' => [
-
+            
             'baseUrl' => '/advanced/admin',
         ],
         'user' => [
@@ -49,4 +49,5 @@ return [
         
     ],
     'params' => $params,
+    'defaultRoute' => 'newsblog/index',
 ];

@@ -40,7 +40,7 @@ $this->title = 'Связаться с нами';
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Отправить', ['class' => 'btn btn-default', 'name' => 'contact-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

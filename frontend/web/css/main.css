@@ -64,6 +64,22 @@ h5 {
 .btn-large {
 	padding: 15px 40px;
 }
+.psevdo-btn {
+    border: 1px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    background-color:  rgba(255, 255, 255, 1);
+    color: #000;
+    letter-spacing: 2px;
+  }
+.psevdo-btn:hover, .psevdo-btn:focus {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background-color:  rgba(247, 202, 201, 1);
+    color: #a00;
+}
+
+
 /* ------------------------------------------------------------------------------
 	Global Styles
 -------------------------------------------------------------------------------*/
@@ -110,6 +126,20 @@ ul li {
     padding-bottom: 1%;
     box-shadow: inset 0 0 10px rgba(0,0,0,1);
     text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
+}
+
+.item-post {;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    padding: 2%;
+    background-color: rgba(170, 152, 189, 0.5);
+    width:100%;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.clearfix {
+    clear: both;
 }
 
 /* ------------------------------------------------------------------------------
@@ -186,6 +216,9 @@ ul li {
 /* ------------------------------------------------------------------------------
 	Pricelist
 -------------------------------------------------------------------------------*/
+.items-view{
+    margin: 2%;
+}
 .pricelist{
     width: 100%;
 	background-color: #eee;
@@ -331,8 +364,6 @@ service-block>div>i{
 	letter-spacing:3px;
 	margin:0 3%;
 	line-height:35px;
-        text-shadow: 5px 5px 1px rgba(150, 150, 150, 1);
-
 }
 .subscribe-form input[type=text] {
 	width: 65%;

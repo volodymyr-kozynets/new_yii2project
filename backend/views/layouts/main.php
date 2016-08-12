@@ -46,9 +46,9 @@ AppAsset::register($this);
         $menuItems = [
             ['label' => 'Каталог', 'url' => ['/items/index']],
             ['label' => 'Отзывы', 'url' => ['/feedback/index']],
-            ['label' => 'О нас', 'url' => ['/site/about']],
-            ['label' => 'Услуги для Вас', 'url' => ['/site/about']],
-            ['label' => 'Связаться с нами', 'url' => ['/site/about']],
+//            ['label' => 'О нас', 'url' => ['/site/about']],
+//            ['label' => 'Услуги для Вас', 'url' => ['/site/about']],
+//            ['label' => 'Связаться с нами', 'url' => ['/site/about']],
         ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
